@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1087/1087815.png">
+<h1 class="mainFont">Introduction</h1>
+<title>Introduction</title>
+  </div>
+        </head>
+    
+<body>
+
+  <a href="index" class="button button1">Home</a>
+  
+<a href="introduction" class="button button2">Introduction</a>
+  
+  <a href="" class="button button3">Page 3</a>
+  
+  <a href="images-videos" class="button button4">Images/Videos</a>
+  
+  <a href="resources" class="button button5">Resources</a>
+
+<style>
+
+    .mainFont {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+      cursor: inherit;
+}
+    
+    .h1 {
+    font-family: 'Product Sans Regular', arial, sans-serif;
+     font-weight:normal;
+     font-style:normal;
+     }   
+    
+    
+    .button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button1 {
+  background-color: gray; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: gray; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: gray; 
+  color: black; 
+  border: 2px solid #ff6600;
+}
+
+.button3:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+.button4 {
+  background-color: gray; 
+  color: black; 
+  border: 2px solid #ffff00;
+}
+
+.button4:hover {
+  background-color: #ffff00;
+  color: white;
+}
+	
+	.button5 {
+  background-color: gray; 
+  color: black; 
+  border: 2px solid #e600e6;
+}
+
+.button5:hover {
+  background-color: #e600e6;
+  color: white;
+}
+body  {
+  background-color: #222831;
+}
+</style>    
+</body>
+<!--
+Code for Cursor
+-->
+<div class="cursor"></div>
+      <div class="navigation">  
+    </div>
+<script>
+  const updateProperties = (elem, state) => {
+  elem.style.setProperty('--x', `${state.x}px`)
+  elem.style.setProperty('--y', `${state.y}px`)
+  elem.style.setProperty('--width', `${state.width}px`)
+  elem.style.setProperty('--height', `${state.height}px`)
+  elem.style.setProperty('--radius', state.radius)
+  elem.style.setProperty('--scale', state.scale)
+}
+
+document.querySelectorAll('.cursor').forEach(cursor => {
+  let onElement
+
+  const createState = e => {
+    const defaultState = {
+      x: e.clientX,
+      y: e.clientY,
+      width: 40,
+      height: 40,
+      radius: '50%'
+    }
+
+    const computedState = {}
+
+    if (onElement != null) {
+      const { top, left, width, height } = onElement.getBoundingClientRect()
+      const radius = window.getComputedStyle(onElement).borderTopLeftRadius
+
+      computedState.x = left + width / 2
+      computedState.y = top + height / 2
+      computedState.width = width
+      computedState.height = height
+      computedState.radius = radius
+    }
+
+    return {
+      ...defaultState,
+      ...computedState
+    }
+  }
+
+  document.addEventListener('mousemove', e => {
+    const state = createState(e)
+    updateProperties(cursor, state)
+  })
+
+  document.querySelectorAll('a, button').forEach(elem => {
+    elem.addEventListener('mouseenter', () => (onElement = elem))
+    elem.addEventListener('mouseleave', () => (onElement = undefined))
+  })
+})
+
+</script>
+<body>
+  
+<p class="mainFont">  Imagine waking up, going through your everyday routine, knowing that you, and everyone else around you, could be wiped off the face of the earth, at the push of a button. This was the sad truth for many people during the time after WWII, known as The Cuban Missile Crisis. At first, it was just the USA and USSR facing off, both having missiles that could easily wipe the other one out and they knew this. Those missiles were never so close to launching than during the 13 day period known as the Cuban Missile Crisis. So, how did we get here? After WWII there was a 45 year period known as the Cold War. During this Cold War, the US tried to make a move on Cuba. as their standings were changed during WWII, invading it in an attack otherwise known as the Bay of Pigs. Unfortunately, Cuba managed to defend themselves and the US failed their attack, so a panicked Cuba sought help from the USSR, America’s opponent in the war. The USSR gladly agreed to help Cuba’s defense, multitasking by countering the US missiles in Italy and Turkey, and soon, supplies from the USSR arrived to the bays of Cuba, and they got to work. By the time  a US Stealth Plane went to survey Cuba, and what they saw was horrifying. 36 R-12 missiles were built, pointed straight at America. News quickly got to Kennedy. Everyone wanted to launch an airstrike and invasion on Cuba, but Kennedy chose to issue an order to block all shipments to Cuba that weren’t supplies for food, water, or medicine. This may not have seemed like a big deal, but the USSR looked at this as an act of aggression, which could be considered worthy of war. Not wanted to go into Nuclear War, Kennedy said that the blockade was only a quarantine, and requested that Cuba withdrawls all missiles from the USSR, but both the USSR and Cuba said they were only defensive, in place after the Bay of Pigs Invasion.</p>
+  
+<style>
+  html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol';
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  cursor: url("data:image/svg+xml,%3Csvg height='6' width='6' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' fill='%23eee' r='4'/%3E%3C/svg%3E") 3 3, auto;
+}
+
+.container {
+  position: relative;
+  max-width: auto;
+  margin: auto;
+  margin-top: 4rem;
+  padding: 1rem;
+  border: 1px solid #81C995;
+  border-radius: 0.25rem;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.close, .min, .max {
+  position: absolute;
+  top: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #81C995;
+  border-radius: 50%;
+}
+.close {
+  left: 1rem;
+  background-color: #81C995;
+}
+.min {
+  left: 2.5rem;
+}
+.max {
+  left: 4rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin-top: 1.75rem;
+  padding: 0.125rem 0;
+}
+
+.margin-left-auto {
+  margin-left: auto;
+}
+
+.content {
+  padding: 1rem;
+}
+.content h1 {
+  line-height: 1;
+  margin-top: 0;
+}
+.content p {
+  line-height: 2;
+}
+
+.cursor {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--width);
+  height: var(--height);
+  transform: translate(calc(var(--x) - var(--width) / 2), calc(var(--y) - var(--height) / 2));
+  /* transition-duration: 125ms;
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition-property: width, height, transform; */
+  transition: 150ms width cubic-bezier(0.39, 0.575, 0.565, 1),
+              150ms height cubic-bezier(0.39, 0.575, 0.565, 1),
+              150ms transform cubic-bezier(0.39, 0.575, 0.565, 1);
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform;
+}
+@media (pointer: fine) {
+  .cursor {
+    display: block;
+  }
+}
+.cursor::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--radius);
+  border: 2px solid #81C995;
+  opacity: var(--scale);
+  -webkit-transform: scale(var(--scale));
+          transform: scale(var(--scale));
+  transition: 300ms opacity cubic-bezier(0.39, 0.575, 0.565, 1),
+              300ms transform cubic-bezier(0.39, 0.575, 0.565, 1),
+              150ms border-radius cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+html:not(html:hover) .cursor::after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.redir {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: none;
+  border-radius: 50%;
+  cursor: inherit;
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  color: #eee;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  cursor: inherit;
+  margin: -0.125rem -0.375rem;
+  padding: 0.125rem 0.375rem;
+  background: none;
+  border-radius: 0.25rem;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+.btn:hover {
+  text-decoration-line: none;
+}
+</style>
+</body>
+</html>
