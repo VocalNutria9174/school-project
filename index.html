@@ -4,7 +4,67 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1087/1087815.png">
-<h1 class="mainFont">The Cuban Missle Crisis 
+<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>	
+<marquee direction="left" speed="normal" behavior="loop" class="marquee">
+   Welcome to Our Project Page!
+</marquee>
+<style>
+.marquee {
+   font-family: sans-serif, 'Press Start 2P';
+   text-transform: uppercase;
+   font-size: 12px;
+   font-weight: bold;
+   background: #232776;
+   padding: .2em 0;
+   color: #29cac8;
+   box-shadow: 2px 2px 10px #232776;
+   overflow: hidden;
+   position: relative;
+   animation: text-line-glow 2s linear infinite;
+}
+@keyframes text-line-glow {
+0% {text-shadow: 0px 0px 0px #29cac8;
+   }
+50% {text-shadow: 0px 0px 4px #29cac8;
+   }
+}
+.marquee:before {
+   content: '';
+   position: absolute;
+   display: block;
+   background-image: 
+    repeating-linear-gradient(0deg, #23277600, #23277600 1px, #040a2444 1px, #040a2444 3px),
+    repeating-linear-gradient(90deg, #23277600, #23277600 2px, #040a2444 2px, #040a2444 3px);
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 1;
+}
+.marquee:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    animation: line-glow 3.5s linear infinite;
+   animation-timing-function: steps(50);
+    }
+@keyframes line-glow {
+0% {
+   right: -2%;
+   background-color: #29cac8;
+   box-shadow: 0 0 20px #ffd2fe00;
+   }
+50% {
+   right: 102%;
+   background-color: #29cac8;
+   box-shadow: 0 0 30px #ffd2feff;
+    }
+   }
+</style>
+	<h1 class="mainFont">The Cuban Missle Crisis 
   <br><br>By: Luke Rybczynski, Presley McNeal, and Jewel Lim</h1>
 <title>The Cuban Missle Crisis</title>
   </div>
